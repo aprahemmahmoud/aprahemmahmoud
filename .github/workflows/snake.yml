@@ -2,7 +2,7 @@ name: Generate Snake Contribution Grid
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # يتم تشغيله يوميًا عند منتصف الليل
+    - cron: "0 0 * * *"  # يتم التشغيل يوميًا عند منتصف الليل
   workflow_dispatch:  # يتيح تشغيله يدويًا
 
 jobs:
@@ -13,13 +13,11 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Generate Snake Animation
-        uses: Platane/snk@v2
-        with:
-          github_user_name: aprahemmahmoud  # ✅ تأكد من صحة اسم المستخدم
-          outputs: dist/github-snake.svg  # ✅ تبسيط الاسم
+        run: |
+          curl -o github-snake.svg https://ghchart.rshah.org/409ba5/aprahemmahmoud
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4  # ✅ تحديث الإصدار
+        uses: actions/upload-artifact@v4
         with:
           name: snake-animation
-          path: dist/github-snake.svg  # ✅ تأكد من صحة المسار
+          path: github-snake.svg
