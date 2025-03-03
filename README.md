@@ -53,5 +53,4 @@
   <img alt="github-snake" src="https://raw.githubusercontent.com/aprahemmahmoud/aprahemmahmoud/output/github-snake.svg" />
 </picture>
 
-![Snake animation](https://github.com/aprahemmahmoud/aprahemmahmoud/blob/main/assets/snake-animation.svg)
 
